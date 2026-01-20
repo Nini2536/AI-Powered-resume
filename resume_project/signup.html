@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | Resume Intelligence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+        radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
+        radial-gradient(circle at 80% 10%, rgba(99,102,241,0.15), transparent 45%),
+        linear-gradient(180deg,#020617,#020617);
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
+/* GLASS CARD */
+.auth-box{
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 0 40px rgba(56,189,248,0.3);
+}
+
+.auth-box h2{
+    text-align:center;
+    margin-bottom:8px;
+    color:#38bdf8;
+}
+
+.auth-box p{
+    text-align:center;
+    font-size:14px;
+    color:#cbd5f5;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    font-size:13px;
+    color:#94a3b8;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px 15px;
+    margin-top:6px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    color:white;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#38bdf8;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(56,189,248,0.6);
+}
+
+.extra{
+    text-align:center;
+    margin-top:20px;
+    font-size:14px;
+}
+
+.extra a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.extra a:hover{
+    text-decoration:underline;
+}
+
+.back{
+    text-align:center;
+    margin-top:15px;
+}
+
+.back a{
+    color:#94a3b8;
+    font-size:13px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="auth-box">
+    <h2>Create Account</h2>
+    <p>Start building smarter resumes with AI</p>
+
+    <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your Name">
+    </div>
+
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com">
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Create password">
+    </div>
+
+    <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Re-enter password">
+    </div>
+
+    <!-- NAVIGATION -->
+    <button onclick="location.href='login.html'">Sign Up</button>
+
+    <div class="extra">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </div>
+
+    <div class="back">
+        <a href="home.html">← Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

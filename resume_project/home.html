@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Intelligence System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+        radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
+        radial-gradient(circle at 80% 10%, rgba(99,102,241,0.15), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(14,165,233,0.12), transparent 40%),
+        linear-gradient(180deg, #020617, #020617);
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* BACKGROUND GLOW SHAPES */
+.bg-shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:0.6;
+    z-index:-1;
+    animation:floatBg 12s infinite alternate ease-in-out;
+}
+
+.shape1{
+    width:350px;
+    height:350px;
+    background:#38bdf8;
+    top:10%;
+    left:-120px;
+}
+
+.shape2{
+    width:420px;
+    height:420px;
+    background:#6366f1;
+    top:55%;
+    right:-180px;
+    animation-delay:3s;
+}
+
+.shape3{
+    width:300px;
+    height:300px;
+    background:#0ea5e9;
+    bottom:-120px;
+    left:40%;
+    animation-delay:6s;
+}
+
+@keyframes floatBg{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(40px,-40px);}
+}
+
+/* HEADER */
+header{
+    padding:25px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    color:#38bdf8;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+header button{
+    padding:12px 32px;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    border:none;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+header button:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 20px rgba(56,189,248,0.6);
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 80px;
+    gap:50px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:54px;
+    line-height:1.25;
+    margin-bottom:25px;
+}
+
+.hero-text span{
+    color:#38bdf8;
+}
+
+.hero-text p{
+    font-size:18px;
+    color:#cbd5f5;
+    margin-bottom:35px;
+    line-height:1.7;
+}
+
+.hero-text button{
+    padding:16px 48px;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    border:none;
+    border-radius:35px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.hero-text button:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 0 25px rgba(56,189,248,0.6);
+}
+
+/* INFO CARD */
+.hero-card{
+    width:400px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 0 45px rgba(56,189,248,0.25);
+    animation:floatCard 5s infinite ease-in-out;
+}
+
+.hero-card h3{
+    color:#38bdf8;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.feature{
+    background:rgba(255,255,255,0.06);
+    padding:15px;
+    border-radius:15px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.feature:hover{
+    transform:scale(1.05);
+    background:rgba(56,189,248,0.15);
+}
+
+@keyframes floatCard{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+/* HOW IT WORKS */
+.how{
+    padding:80px;
+    text-align:center;
+}
+
+.how h2{
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.step{
+    background:rgba(255,255,255,0.06);
+    padding:30px;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.step:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(56,189,248,0.3);
+}
+
+.step h4{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+    font-size:14px;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        padding:60px 30px;
+        text-align:center;
+    }
+    .hero-card{
+        width:100%;
+        max-width:420px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND SHAPES -->
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+<div class="bg-shape shape3"></div>
+
+<header>
+    <h2>Resume Intelligence</h2>
+    <button onclick="location.href='login.html'">Login</button>
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>
+            Build <span>ATS-Optimized</span><br>
+            Resumes with AI Intelligence
+        </h1>
+        <p>
+            Resume Intelligence System is an AI-powered platform that evaluates resumes,
+            predicts rejection risks, and provides a personalized learning roadmap
+            to accelerate career success.
+        </p>
+        <button onclick="location.href='login.html'">
+            Get Started Free
+        </button>
+    </div>
+
+    <div class="hero-card">
+        <h3>Key Capabilities</h3>
+        <div class="features">
+            <div class="feature">📄 ATS Score Analysis</div>
+            <div class="feature">📊 Resume Insights</div>
+            <div class="feature">🎯 Skill Gap Detection</div>
+            <div class="feature">🧠 Interview Readiness</div>
+            <div class="feature">🛠 Learning Roadmap</div>
+            <div class="feature">📈 Progress Tracking</div>
+        </div>
+    </div>
+
+</section>
+
+<section class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <h4>Upload Resume</h4>
+            <p>Securely upload your resume for intelligent processing.</p>
+        </div>
+        <div class="step">
+            <h4>AI Evaluation</h4>
+            <p>ATS scoring, keyword analysis, and rejection prediction.</p>
+        </div>
+        <div class="step">
+            <h4>Smart Insights</h4>
+            <p>Personalized suggestions to improve resume effectiveness.</p>
+        </div>
+        <div class="step">
+            <h4>Career Roadmap</h4>
+            <p>Custom learning path and interview preparation plan.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Resume Intelligence System — Academic / Mock Project<br>
+    AI-Driven Resume Evaluation & Career Guidance Platform
+</footer>
+
+</body>
+</html>

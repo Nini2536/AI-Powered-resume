@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Feedback</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* HEADER */
+header{
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#020617;
+}
+
+header h2{
+    color:#38bdf8;
+}
+
+/* MAIN */
+.container{
+    padding:40px;
+}
+
+/* GLASS BOX */
+.box{
+    background:#020617;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+.box:hover{
+    box-shadow:0 0 25px #38bdf8;
+}
+
+/* INPUT */
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    background:#1e293b;
+    color:white;
+    font-size:15px;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+/* RATING */
+.stars{
+    margin-top:15px;
+    font-size:26px;
+    color:gray;
+    cursor:pointer;
+}
+
+.stars span:hover,
+.stars span.active{
+    color:#38bdf8;
+}
+
+/* BUTTON */
+button{
+    margin-top:20px;
+    padding:14px 35px;
+    background:#38bdf8;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
+}
+
+/* SUCCESS */
+.success{
+    display:none;
+    margin-top:20px;
+    color:#38bdf8;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Resume Intelligence</h2>
+    <div>Feedback</div>
+</header>
+
+<div class="container">
+
+    <div class="box">
+        <h3>We value your feedback</h3>
+        <p>Your feedback helps us improve resume intelligence features.</p>
+
+        <input type="text" placeholder="Your Name">
+        <textarea placeholder="Share your experience..."></textarea>
+
+        <div class="stars" id="stars">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+        </div>
+
+        <button onclick="submitFeedback()">Submit Feedback</button>
+
+        <div class="success" id="success">
+            ✅ Thank you! Your feedback has been recorded.
+        </div>
+    </div>
+
+    <button onclick="location.href='roadmap.html'">
+        ← Back to Learning Roadmap
+    </button>
+
+</div>
+
+<script>
+const stars = document.querySelectorAll("#stars span");
+let rating = 0;
+
+stars.forEach((star, index) => {
+    star.onclick = () => {
+        rating = index + 1;
+        stars.forEach((s, i) => {
+            s.classList.toggle("active", i < rating);
+        });
+    };
+});
+
+function submitFeedback(){
+    document.getElementById("success").style.display = "block";
+}
+</script>
+
+</body>
+</html>
